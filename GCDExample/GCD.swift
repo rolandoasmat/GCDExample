@@ -10,6 +10,7 @@ import Foundation
 
 public struct GCD {
     
+    // A task will always be a closure with no parameters and void return
     public typealias Task = () -> Void
     
 }
@@ -17,10 +18,12 @@ public struct GCD {
 // MARK: Queues
 extension GCD {
     
+    // Main queue is a serial queue
     public static func getMainQueue() -> dispatch_queue_t {
         return dispatch_get_main_queue()
     }
     
+    // All global queues are concurrent queues
     public static func getGlobalQueue(qualityOfService:QualityOfService) -> dispatch_queue_t {
         return dispatch_get_global_queue(qualityOfService.value, 0)
     }
@@ -58,6 +61,7 @@ extension GCD {
 // MARK: Barriers
 extension GCD {
     
+    // Only 1 task will run at a time in provided queue
     public static func runAsyncBarrier(queue:dispatch_queue_t, task:Task) {
         dispatch_barrier_async(queue, task)
     }
@@ -100,11 +104,16 @@ extension GCD {
         return timer
     }
     
+    public static func timerStop(timer:dispatch_source_t) {
+        dispatch_suspend(timer)
+    }
+    
 }
 
 // MARK: Quality of Service
 public enum QualityOfService {
     
+    // Ordered by priority
     case UserInteractive
     case UserInitiated
     case Default

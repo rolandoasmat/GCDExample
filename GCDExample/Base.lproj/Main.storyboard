@@ -44,17 +44,26 @@
                                     <action selector="example2Pressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="BM9-oz-KhG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LeS-fu-s5x">
+                                <rect key="frame" x="263" y="430" width="72" height="30"/>
+                                <state key="normal" title="Example 3"/>
+                                <connections>
+                                    <action selector="example3Pressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="c9b-E7-cCF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstItem="2Bi-tW-gc2" firstAttribute="centerX" secondItem="9zn-q1-Il2" secondAttribute="centerX" id="Mhh-yg-k34"/>
                             <constraint firstItem="2Bi-tW-gc2" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="71" id="Vrh-1x-Be2"/>
+                            <constraint firstItem="LeS-fu-s5x" firstAttribute="top" secondItem="2Bi-tW-gc2" secondAttribute="bottom" constant="8" symbolic="YES" id="YGc-uz-acj"/>
                             <constraint firstItem="9zn-q1-Il2" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="ZPh-R9-snC"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="9zn-q1-Il2" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="8" id="dw1-TF-qoy"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="LeS-fu-s5x" firstAttribute="trailing" secondItem="2Bi-tW-gc2" secondAttribute="trailing" id="mvb-nv-g14"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>

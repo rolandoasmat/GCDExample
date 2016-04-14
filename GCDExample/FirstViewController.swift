@@ -28,6 +28,9 @@ class FirstViewController: UIViewController {
         self.exampleTwo()
     }
     
+    @IBAction func example3Pressed(sender: UIButton) {
+        self.exampleThree()
+    }
 
     /**
      Basic use of getting a global queue, creating custom queues and running tasks on them.
@@ -93,6 +96,23 @@ class FirstViewController: UIViewController {
                 self.mainLabel.text = String(sum)
             }
             
+        }
+    }
+    
+    var timer:dispatch_source_t?
+    /**
+     Shows off timers and how to user them properly
+     */
+    func exampleThree() {
+        let queue = GCD.getGlobalQueue(QualityOfService.Default)
+        self.timer = GCD.timerAsync(queue, interval: 2.0) {
+            print("timer set off!")
+        }
+        GCD.runAsync(queue, delayInSeconds: 6.0) {
+            if let timer = self.timer {
+                GCD.timerStop(timer)
+                print("timer stopped.")
+            }
         }
     }
 
