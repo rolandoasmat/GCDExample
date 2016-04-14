@@ -1,2 +1,2 @@
 # GCDExample1
-This is a ver basic iOS app that includes an GCD wrapper and uses.
+This is a very basic iOS app that includes a GCD wrapper and some example uses.
