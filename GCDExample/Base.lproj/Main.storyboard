@@ -103,57 +103,36 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R6q-CH-yJQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-Qv-rxj">
                                 <rect key="frame" x="264" y="354" width="72" height="30"/>
+                                <state key="normal" title="Example 4"/>
+                                <connections>
+                                    <action selector="example4Pressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="9j4-iw-bDT"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ens-nC-GSz">
+                                <rect key="frame" x="264" y="392" width="72" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLl-wp-emq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kX-Ps-L1j">
                                         <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <state key="normal" title="Example 3"/>
+                                        <state key="normal" title="Example 5"/>
                                         <connections>
-                                            <action selector="exampleThree:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="B0p-oa-9id"/>
+                                            <action selector="example5Pressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XXH-aa-5AD"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JIE-AI-cfL">
-                                <rect key="frame" x="264" y="392" width="72" height="30"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Faz-IO-yAw">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Q2m-GL-UA5">
-                                                <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmG-0D-3LN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                                        <state key="normal" title="Example 4"/>
-                                                        <connections>
-                                                            <action selector="Example4:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dIf-rf-cOm"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="dmG-0D-3LN" firstAttribute="centerX" secondItem="Q2m-GL-UA5" secondAttribute="centerX" id="WtM-PE-p4u"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Faz-IO-yAw" firstAttribute="centerX" secondItem="JIE-AI-cfL" secondAttribute="centerX" id="NMm-1i-I6n"/>
-                                </constraints>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="JIE-AI-cfL" firstAttribute="leading" secondItem="R6q-CH-yJQ" secondAttribute="leading" id="Byv-FJ-Xii"/>
-                            <constraint firstItem="dmG-0D-3LN" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="71" id="IN3-Nt-kqc"/>
-                            <constraint firstItem="R6q-CH-yJQ" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Zcu-Bt-cvr"/>
-                            <constraint firstItem="R6q-CH-yJQ" firstAttribute="top" secondItem="NDk-cv-Gan" secondAttribute="bottom" constant="8" symbolic="YES" id="hDO-Z8-N0m"/>
+                            <constraint firstItem="ens-nC-GSz" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="71" id="BGw-GS-hoe"/>
+                            <constraint firstItem="ens-nC-GSz" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Dkm-yi-Bf6"/>
+                            <constraint firstItem="M7H-Qv-rxj" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="33" id="ZGd-YG-5Nv"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="nHM-dl-l2F"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="tpb-4y-KPP"/>
+                            <constraint firstItem="M7H-Qv-rxj" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="yuY-a5-iIo"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>

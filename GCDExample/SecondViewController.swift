@@ -26,15 +26,13 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func exampleThree(sender: UIButton) {
-        self.exampleThree()
-    }
-    
-    
-    @IBAction func Example4(sender: UIButton) {
+    @IBAction func example4Pressed(sender: UIButton) {
         self.exampleFour()
     }
     
+    @IBAction func example5Pressed(sender: UIButton) {
+        self.exampleFive()
+    }
     
     func addPerson(person:Person) {
         self.people.append(person)
@@ -51,14 +49,13 @@ class SecondViewController: UIViewController {
     /**
      This example shows how to protect a critical section
      */
-    func exampleThree() {
+    func exampleFour() {
         self.people.removeAll()
         print()
         // The main use case here is protection a resource from a custom concurrent queue, first create one
         let myQueue = GCD.createConcurrentQueue("MyOneAndOnlyQueue")
-        let globalQueue = GCD.getGlobalQueue(QualityOfService.Utility)
         for entry in db {
-            GCD.runAsync(globalQueue) {
+            GCD.runAsync(myQueue) {
                 self.addPerson(Person(name: entry.0, age: entry.1), queue: myQueue)
             }
         }
@@ -67,27 +64,28 @@ class SecondViewController: UIViewController {
     /**
      Here we will make several async calls, create a group to keep track of the tasts and update the UI once complete
      */
-    func exampleFour() {
+    func exampleFive() {
         print()
         // Let's get a global concurrent queue to run tasks ins
         let globalQueue = GCD.getGlobalQueue(QualityOfService.UserInitiated)
         // Create group
         let group = GCD.getGroup()
         var total = 0
-        for index in 0...10 {
+        for i in 0...10 {
             GCD.enterGroup(group)
             GCD.runAsync(globalQueue) {
                 var sum = 0
-                for index in 0...10 {
-                    sum += index
+                for j in 0...10 {
+                    sum += i * j
                 }
                 total += sum
                 GCD.leaveGroup(group)
             }
         }
+        print("Finished at \(total)")
         GCD.groupComplete(group, queue: GCD.getMainQueue()) {
             self.mainLabel.text = "Finished."
-            print("Finished total: \(total)")
+            print("Finished for reals: \(total)")
         }
     }
 

@@ -49,7 +49,7 @@ class FirstViewController: UIViewController {
         // Add small math task to queue
         GCD.runAsync(globalQueue) {
             var sum = 0
-            for index in 0...10000 {
+            for index in 0...100 {
                 sum += index
             }
             print("2. Finished! the sum is \(sum)")
@@ -60,7 +60,7 @@ class FirstViewController: UIViewController {
         // Add a long task to custom queue
         GCD.runAsync(myQueue) {
             var sum = 0
-            let randomNum = Int(arc4random_uniform(20)*100000)
+            let randomNum = Int(arc4random_uniform(20)*100)
             for index in 0...randomNum {
                 sum += index
             }
