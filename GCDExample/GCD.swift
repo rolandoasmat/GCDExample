@@ -105,7 +105,7 @@ extension GCD {
     }
     
     public static func timerStop(timer:dispatch_source_t) {
-        dispatch_suspend(timer)
+        dispatch_source_cancel(timer)
     }
     
 }
