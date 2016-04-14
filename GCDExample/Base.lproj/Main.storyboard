@@ -110,23 +110,15 @@
                                     <action selector="example4Pressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="9j4-iw-bDT"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ens-nC-GSz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kX-Ps-L1j">
                                 <rect key="frame" x="264" y="392" width="72" height="30"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kX-Ps-L1j">
-                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
-                                        <state key="normal" title="Example 5"/>
-                                        <connections>
-                                            <action selector="example5Pressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XXH-aa-5AD"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                                <state key="normal" title="Example 5"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ens-nC-GSz" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="71" id="BGw-GS-hoe"/>
-                            <constraint firstItem="ens-nC-GSz" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="Dkm-yi-Bf6"/>
+                            <constraint firstItem="2kX-Ps-L1j" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="VFf-C7-xuB"/>
+                            <constraint firstItem="2kX-Ps-L1j" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="71" id="VWM-cD-j4R"/>
                             <constraint firstItem="M7H-Qv-rxj" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="33" id="ZGd-YG-5Nv"/>
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="nHM-dl-l2F"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
