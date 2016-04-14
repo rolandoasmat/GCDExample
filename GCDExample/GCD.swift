@@ -10,7 +10,7 @@ import Foundation
 
 public struct GCD {
     
-    public typealias Closure = () -> Void
+    public typealias Task = () -> Void
     
 }
 
@@ -36,17 +36,68 @@ extension GCD {
 }
 
 
-// MARK: Asysnc calls
+// MARK: Asysnc/sync calls
 extension GCD {
     
-    public static func runAsync(queue:dispatch_queue_t, task:Closure) {
+    public static func runAsync(queue:dispatch_queue_t, task:Task) {
         dispatch_async(queue, task)
     }
     
-    public static func runAsync(queue:dispatch_queue_t, delayInSeconds:Double, task:Closure) {
+    public static func runAsync(queue:dispatch_queue_t, delayInSeconds:Double, task:Task) {
         let delay = Int64(delayInSeconds*Double(NSEC_PER_SEC))
         let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, delay)
         dispatch_after(dispatchTime, queue, task)
+    }
+    
+    public static func runSync(queue:dispatch_queue_t, task:Task) {
+        dispatch_sync(queue, task)
+    }
+    
+}
+
+// MARK: Barriers
+extension GCD {
+    
+    public static func runAsyncBarrier(queue:dispatch_queue_t, task:Task) {
+        dispatch_barrier_async(queue, task)
+    }
+    
+    public static func runSyncBarrier(queue:dispatch_queue_t, task:Task) {
+        dispatch_barrier_sync(queue, task)
+    }
+    
+}
+
+// MARK: Groups
+extension GCD {
+    
+    public static func getGroup() -> dispatch_group_t {
+        return dispatch_group_create()
+    }
+    
+    public static func enterGroup(group:dispatch_group_t) {
+        dispatch_group_enter(group)
+    }
+    
+    public static func leaveGroup(group:dispatch_group_t) {
+        dispatch_group_leave(group)
+    }
+    
+    public static func groupComplete(group:dispatch_group_t, queue:dispatch_queue_t, task:Task) {
+        dispatch_group_notify(group, queue, task)
+    }
+    
+}
+
+// MARK: Timers
+extension GCD {
+    
+    public static func timerAsync(queue:dispatch_queue_t, interval:Double, task:Task) -> dispatch_source_t {
+        let timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue)
+        dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, UInt64(interval * Double(NSEC_PER_SEC)), 100)
+        dispatch_source_set_event_handler(timer, task)
+        dispatch_resume(timer)
+        return timer
     }
     
 }
