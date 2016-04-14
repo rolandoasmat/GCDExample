@@ -113,6 +113,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kX-Ps-L1j">
                                 <rect key="frame" x="264" y="392" width="72" height="30"/>
                                 <state key="normal" title="Example 5"/>
+                                <connections>
+                                    <action selector="example5Pressed:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="f7e-Y6-qYA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

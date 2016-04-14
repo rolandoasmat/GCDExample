@@ -34,6 +34,7 @@ class SecondViewController: UIViewController {
         self.exampleFive()
     }
     
+    
     func addPerson(person:Person) {
         self.people.append(person)
         print(self.people)

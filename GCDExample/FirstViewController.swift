@@ -89,8 +89,8 @@ class FirstViewController: UIViewController {
                 sum += index
             }
             
-//            self.mainLabel.text = String(sum) <- This will print warnings to the console, do not do this!
-//            Instead, update the UI in the main queue
+//            self.mainLabel.text = String(sum) //<- This will print warnings to the console, do not do this!
+//            //Instead, update the UI in the main queue
             
             GCD.runAsync(GCD.getMainQueue()) {
                 self.mainLabel.text = String(sum)
