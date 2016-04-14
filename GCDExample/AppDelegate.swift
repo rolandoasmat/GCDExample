@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  GCDExample1
+//  GCDExample
 //
-//  Created by Rolando Asmat on 4/13/16.
+//  Created by Rolando Asmat on 4/14/16.
 //  Copyright © 2016 YAMS. All rights reserved.
 //
 

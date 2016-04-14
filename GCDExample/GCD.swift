@@ -11,7 +11,7 @@ import Foundation
 public struct GCD {
     
     public typealias Closure = () -> Void
-
+    
 }
 
 // MARK: Queues

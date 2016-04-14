@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B3C3FC831CBF38A5006AA5F1"
-               BuildableName = "GCDExample1.app"
-               BlueprintName = "GCDExample1"
-               ReferencedContainer = "container:GCDExample1.xcodeproj">
+               BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
+               BuildableName = "GCDExample.app"
+               BlueprintName = "GCDExample"
+               ReferencedContainer = "container:GCDExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B3C3FC991CBF38A6006AA5F1"
-               BuildableName = "GCDExample1Tests.xctest"
-               BlueprintName = "GCDExample1Tests"
-               ReferencedContainer = "container:GCDExample1.xcodeproj">
+               BlueprintIdentifier = "B3C3FCCB1CBF5C26006AA5F1"
+               BuildableName = "GCDExampleTests.xctest"
+               BlueprintName = "GCDExampleTests"
+               ReferencedContainer = "container:GCDExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B3C3FC831CBF38A5006AA5F1"
-            BuildableName = "GCDExample1.app"
-            BlueprintName = "GCDExample1"
-            ReferencedContainer = "container:GCDExample1.xcodeproj">
+            BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
+            BuildableName = "GCDExample.app"
+            BlueprintName = "GCDExample"
+            ReferencedContainer = "container:GCDExample.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,10 +65,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B3C3FC831CBF38A5006AA5F1"
-            BuildableName = "GCDExample1.app"
-            BlueprintName = "GCDExample1"
-            ReferencedContainer = "container:GCDExample1.xcodeproj">
+            BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
+            BuildableName = "GCDExample.app"
+            BlueprintName = "GCDExample"
+            ReferencedContainer = "container:GCDExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -84,10 +84,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B3C3FC831CBF38A5006AA5F1"
-            BuildableName = "GCDExample1.app"
-            BlueprintName = "GCDExample1"
-            ReferencedContainer = "container:GCDExample1.xcodeproj">
+            BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
+            BuildableName = "GCDExample.app"
+            BlueprintName = "GCDExample"
+            ReferencedContainer = "container:GCDExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

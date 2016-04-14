@@ -1,15 +1,15 @@
 //
-//  GCDExample1Tests.swift
-//  GCDExample1Tests
+//  GCDExampleTests.swift
+//  GCDExampleTests
 //
-//  Created by Rolando Asmat on 4/13/16.
+//  Created by Rolando Asmat on 4/14/16.
 //  Copyright © 2016 YAMS. All rights reserved.
 //
 
 import XCTest
-@testable import GCDExample1
+@testable import GCDExample
 
-class GCDExample1Tests: XCTestCase {
+class GCDExampleTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

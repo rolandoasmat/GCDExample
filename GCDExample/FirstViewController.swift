@@ -1,8 +1,8 @@
 //
 //  FirstViewController.swift
-//  GCDExample1
+//  GCDExample
 //
-//  Created by Rolando Asmat on 4/13/16.
+//  Created by Rolando Asmat on 4/14/16.
 //  Copyright © 2016 YAMS. All rights reserved.
 //
 
@@ -11,11 +11,9 @@ import UIKit
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        
+        self.exampleOne()
         
     }
 
@@ -53,6 +51,7 @@ class FirstViewController: UIViewController {
         }
         
     }
+
 
 
 }
