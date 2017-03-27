@@ -60,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B31519FB1E899E7400944240 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3C3FCB91CBF5C25006AA5F1 /* AppDelegate.swift */,
+				B3C3FCC21CBF5C26006AA5F1 /* Assets.xcassets */,
+				B3C3FCC41CBF5C26006AA5F1 /* LaunchScreen.storyboard */,
+				B3C3FCC71CBF5C26006AA5F1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B3C3FCAD1CBF5C25006AA5F1 = {
 			isa = PBXGroup;
 			children = (
@@ -81,14 +92,11 @@
 		B3C3FCB81CBF5C25006AA5F1 /* GCDExample */ = {
 			isa = PBXGroup;
 			children = (
-				B3C3FCB91CBF5C25006AA5F1 /* AppDelegate.swift */,
-				B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */,
-				B3C3FCDB1CBF5C4B006AA5F1 /* GCD.swift */,
-				B3C3FCBD1CBF5C25006AA5F1 /* SecondViewController.swift */,
 				B3C3FCBF1CBF5C25006AA5F1 /* Main.storyboard */,
-				B3C3FCC21CBF5C26006AA5F1 /* Assets.xcassets */,
-				B3C3FCC41CBF5C26006AA5F1 /* LaunchScreen.storyboard */,
-				B3C3FCC71CBF5C26006AA5F1 /* Info.plist */,
+				B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */,
+				B3C3FCBD1CBF5C25006AA5F1 /* SecondViewController.swift */,
+				B3C3FCDB1CBF5C4B006AA5F1 /* GCD.swift */,
+				B31519FB1E899E7400944240 /* Supporting Files */,
 			);
 			path = GCDExample;
 			sourceTree = "<group>";
@@ -147,14 +155,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = YAMS;
 				TargetAttributes = {
 					B3C3FCB51CBF5C25006AA5F1 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 					};
 					B3C3FCCB1CBF5C26006AA5F1 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 0820;
 						TestTargetID = B3C3FCB51CBF5C25006AA5F1;
 					};
 				};
@@ -262,8 +272,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -308,8 +320,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -328,6 +342,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -341,6 +356,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YAMS.GCDExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -352,6 +368,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YAMS.GCDExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -363,6 +380,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YAMS.GCDExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCDExample.app/GCDExample";
 			};
 			name = Debug;
@@ -375,6 +393,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.YAMS.GCDExampleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GCDExample.app/GCDExample";
 			};
 			name = Release;
@@ -398,6 +417,7 @@
 				B3C3FCD71CBF5C26006AA5F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B3C3FCD81CBF5C26006AA5F1 /* Build configuration list for PBXNativeTarget "GCDExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +426,7 @@
 				B3C3FCDA1CBF5C26006AA5F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

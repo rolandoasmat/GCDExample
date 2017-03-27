@@ -20,16 +20,12 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func example1Pressed(sender: UIButton) {
+    @IBAction func example1Pressed(_ sender: UIButton) {
         self.exampleOne()
     }
     
-    @IBAction func example2Pressed(sender: UIButton) {
+    @IBAction func example2Pressed(_ sender: UIButton) {
         self.exampleTwo()
-    }
-    
-    @IBAction func example3Pressed(sender: UIButton) {
-        self.exampleThree()
     }
 
     /**
@@ -45,7 +41,7 @@ class FirstViewController: UIViewController {
         }
         
         // Get the user initiated QOS global queue
-        let globalQueue = GCD.getGlobalQueue(QualityOfService.UserInitiated)
+        let globalQueue = GCD.getGlobalQueue(DispatchQoS.QoSClass.userInitiated)
         // Add small math task to queue
         GCD.runAsync(globalQueue) {
             var sum = 0
@@ -80,7 +76,7 @@ class FirstViewController: UIViewController {
      */
     func exampleTwo() {
         // Get the user initiated QOS global queue
-        let globalQueue = GCD.getGlobalQueue(QualityOfService.UserInteractive)
+        let globalQueue = GCD.getGlobalQueue(DispatchQoS.QoSClass.userInitiated)
         // Add a small math operation task
         GCD.runAsync(globalQueue) {
             var sum = 0
@@ -99,24 +95,5 @@ class FirstViewController: UIViewController {
         }
     }
     
-    var timer:dispatch_source_t?
-    /**
-     Shows off timers and how to user them properly
-     */
-    func exampleThree() {
-        let queue = GCD.getGlobalQueue(QualityOfService.Default)
-        self.timer = GCD.timerAsync(queue, interval: 2.0) {
-            print("timer set off!")
-        }
-        GCD.runAsync(queue, delayInSeconds: 6.0) {
-            if let timer = self.timer {
-                GCD.timerStop(timer)
-                print("timer stopped.")
-            }
-        }
-    }
-
-
-
 }
 

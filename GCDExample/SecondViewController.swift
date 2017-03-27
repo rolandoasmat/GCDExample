@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class SecondViewController: UIViewController {
     let db = [("Yrua", "25"),
@@ -26,21 +27,21 @@ class SecondViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func example4Pressed(sender: UIButton) {
+    @IBAction func example4Pressed(_ sender: UIButton) {
         self.exampleFour()
     }
     
-    @IBAction func example5Pressed(sender: UIButton) {
+    @IBAction func example5Pressed(_ sender: UIButton) {
         self.exampleFive()
     }
     
     
-    func addPerson(person:Person) {
+    func addPerson(_ person:Person) {
         self.people.append(person)
         print(self.people)
     }
     
-    func addPerson(person:Person, queue:dispatch_queue_t) {
+    func addPerson(_ person:Person, queue:DispatchQueue) {
         GCD.runAsyncBarrier(queue) {
             self.people.append(person)
             print(self.people)
@@ -68,7 +69,7 @@ class SecondViewController: UIViewController {
     func exampleFive() {
         print()
         // Let's get a global concurrent queue to run tasks ins
-        let globalQueue = GCD.getGlobalQueue(QualityOfService.UserInitiated)
+        let globalQueue = GCD.getGlobalQueue(DispatchQoS.QoSClass.userInitiated)
         // Create group
         let group = GCD.getGroup()
         var total = 0

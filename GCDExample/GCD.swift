@@ -5,6 +5,10 @@
 //  Created by Rolando Asmat on 4/13/16.
 //  Copyright © 2016 YAMS. All rights reserved.
 //
+// References: 
+// - https://developer.apple.com/reference/dispatch
+// - https://www.raywenderlich.com/148513/grand-central-dispatch-tutorial-swift-3-part-1
+//
 
 import Foundation
 
@@ -18,42 +22,47 @@ public struct GCD {
 // MARK: Queues
 extension GCD {
     
-    // Main queue is a serial queue
-    public static func getMainQueue() -> dispatch_queue_t {
-        return dispatch_get_main_queue()
+    /// Main queue:
+    /// Runs on the main thread and is a serial queue.
+    public static func getMainQueue() -> DispatchQueue {
+        return DispatchQueue.main
     }
     
-    // All global queues are concurrent queues
-    public static func getGlobalQueue(qualityOfService:QualityOfService) -> dispatch_queue_t {
-        return dispatch_get_global_queue(qualityOfService.value, 0)
+    /// Global queues:
+    /// Concurrent queues that are shared by the whole system. 
+    /// When setting up a Global Queue specify a QualityOfService in order for the 
+    /// system to determine a priority.
+    public static func getGlobalQueue(_ qualityOfService:DispatchQoS.QoSClass) -> DispatchQueue {
+        return DispatchQueue.global(qos: qualityOfService)
     }
     
-    public static func createConcurrentQueue(name:String) -> dispatch_queue_t {
-        return dispatch_queue_create(name, DISPATCH_QUEUE_CONCURRENT)
+    /// Custom queues: 
+    /// Queues that you create which can be serial or concurrent.
+    /// These actually trickle down into being handled by one of the global queues.
+    public static func createConcurrentQueue(_ name:String) -> DispatchQueue {
+        return DispatchQueue(label: name, attributes: DispatchQueue.Attributes.concurrent)
     }
-    
-    public static func createSerialQueue(name:String) -> dispatch_queue_t {
-        return dispatch_queue_create(name, DISPATCH_QUEUE_SERIAL)
+    public static func createSerialQueue(_ name:String) -> DispatchQueue {
+        return DispatchQueue(label: name, attributes: [])
     }
     
 }
 
 
-// MARK: Asysnc/sync calls
+// MARK: Dispatching Tasks
 extension GCD {
     
-    public static func runAsync(queue:dispatch_queue_t, task:Task) {
-        dispatch_async(queue, task)
+    /// Run task Asynchronously
+    /// An asynchronous function returns immediately, ordering the task to be done but not waiting for it. 
+    /// Thus, an asynchronous function does not block the current thread of execution from proceeding on to the next function.
+    public static func runAsync(_ queue:DispatchQueue, task:@escaping Task) {
+        queue.async(execute: task)
     }
     
-    public static func runAsync(queue:dispatch_queue_t, delayInSeconds:Double, task:Task) {
-        let delay = Int64(delayInSeconds*Double(NSEC_PER_SEC))
-        let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, delay)
-        dispatch_after(dispatchTime, queue, task)
-    }
-    
-    public static func runSync(queue:dispatch_queue_t, task:Task) {
-        dispatch_sync(queue, task)
+    /// Run task Synchronously 
+    /// A synchronous function returns control to the caller after the task is completed.
+    public static func runSync(_ queue:DispatchQueue, task:Task) {
+        queue.sync(execute: task)
     }
     
 }
@@ -62,12 +71,12 @@ extension GCD {
 extension GCD {
     
     // Only 1 task will run at a time in provided queue
-    public static func runAsyncBarrier(queue:dispatch_queue_t, task:Task) {
-        dispatch_barrier_async(queue, task)
+    public static func runAsyncBarrier(_ queue:DispatchQueue, task:@escaping Task) {
+        queue.async(flags: .barrier, execute: task)
     }
     
-    public static func runSyncBarrier(queue:dispatch_queue_t, task:Task) {
-        dispatch_barrier_sync(queue, task)
+    public static func runSyncBarrier(_ queue:DispatchQueue, task:Task) {
+        queue.sync(flags: .barrier, execute: task)
     }
     
 }
@@ -75,64 +84,21 @@ extension GCD {
 // MARK: Groups
 extension GCD {
     
-    public static func getGroup() -> dispatch_group_t {
-        return dispatch_group_create()
+    public static func getGroup() -> DispatchGroup {
+        return DispatchGroup()
     }
     
-    public static func enterGroup(group:dispatch_group_t) {
-        dispatch_group_enter(group)
+    public static func enterGroup(_ group:DispatchGroup) {
+        group.enter()
     }
     
-    public static func leaveGroup(group:dispatch_group_t) {
-        dispatch_group_leave(group)
+    public static func leaveGroup(_ group:DispatchGroup) {
+        group.leave()
     }
     
-    public static func groupComplete(group:dispatch_group_t, queue:dispatch_queue_t, task:Task) {
-        dispatch_group_notify(group, queue, task)
-    }
-    
-}
-
-// MARK: Timers
-extension GCD {
-    
-    public static func timerAsync(queue:dispatch_queue_t, interval:Double, task:Task) -> dispatch_source_t {
-        let timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue)
-        dispatch_source_set_timer(timer, DISPATCH_TIME_NOW, UInt64(interval * Double(NSEC_PER_SEC)), 100)
-        dispatch_source_set_event_handler(timer, task)
-        dispatch_resume(timer)
-        return timer
-    }
-    
-    public static func timerStop(timer:dispatch_source_t) {
-        dispatch_source_cancel(timer)
+    public static func groupComplete(_ group:DispatchGroup, queue:DispatchQueue, task:@escaping Task) {
+        group.notify(queue: queue, execute: task)
     }
     
 }
 
-// MARK: Quality of Service
-public enum QualityOfService {
-    
-    // Ordered by priority
-    case UserInteractive
-    case UserInitiated
-    case Default
-    case Utility
-    case Background
-    
-    var value:Int {
-        switch self {
-        case .UserInteractive:
-            return Int(QOS_CLASS_USER_INTERACTIVE.rawValue)
-        case .UserInitiated:
-            return Int(QOS_CLASS_USER_INITIATED.rawValue)
-        case .Default:
-            return Int(QOS_CLASS_DEFAULT.rawValue)
-        case .Utility:
-            return Int(QOS_CLASS_UTILITY.rawValue)
-        case .Background:
-            return Int(QOS_CLASS_BACKGROUND.rawValue)
-        }
-    }
-    
-}
