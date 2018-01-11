@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B312340F2007091200DB2256 /* MasterViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */; };
 		B3C3FCBA1CBF5C25006AA5F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3FCB91CBF5C25006AA5F1 /* AppDelegate.swift */; };
 		B3C3FCBC1CBF5C25006AA5F1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */; };
 		B3C3FCBE1CBF5C25006AA5F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3FCBD1CBF5C25006AA5F1 /* SecondViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewControllerTableViewController.swift; sourceTree = "<group>"; };
 		B3C3FCB61CBF5C25006AA5F1 /* GCDExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C3FCB91CBF5C25006AA5F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B3C3FCBF1CBF5C25006AA5F1 /* Main.storyboard */,
+				B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */,
 				B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */,
 				B3C3FCBD1CBF5C25006AA5F1 /* SecondViewController.swift */,
 				B3C3FCDB1CBF5C4B006AA5F1 /* GCD.swift */,
@@ -216,6 +219,7 @@
 			files = (
 				B3C3FCBE1CBF5C25006AA5F1 /* SecondViewController.swift in Sources */,
 				B3C3FCBA1CBF5C25006AA5F1 /* AppDelegate.swift in Sources */,
+				B312340F2007091200DB2256 /* MasterViewControllerTableViewController.swift in Sources */,
 				B3C3FCDC1CBF5C4B006AA5F1 /* GCD.swift in Sources */,
 				B3C3FCBC1CBF5C25006AA5F1 /* FirstViewController.swift in Sources */,
 			);
