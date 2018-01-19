@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B312340F2007091200DB2256 /* MasterViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */; };
+		B3A82D9320118D14002EC0E6 /* QueuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A82D9220118D14002EC0E6 /* QueuesViewController.swift */; };
+		B3A82D9520118D24002EC0E6 /* SyncAsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A82D9420118D24002EC0E6 /* SyncAsyncViewController.swift */; };
+		B3A82D9920118D5F002EC0E6 /* BarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A82D9820118D5F002EC0E6 /* BarrierViewController.swift */; };
+		B3A82D9B20118D73002EC0E6 /* GroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A82D9A20118D73002EC0E6 /* GroupsViewController.swift */; };
 		B3C3FCBA1CBF5C25006AA5F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3FCB91CBF5C25006AA5F1 /* AppDelegate.swift */; };
-		B3C3FCBC1CBF5C25006AA5F1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */; };
-		B3C3FCBE1CBF5C25006AA5F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C3FCBD1CBF5C25006AA5F1 /* SecondViewController.swift */; };
 		B3C3FCC11CBF5C26006AA5F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C3FCBF1CBF5C25006AA5F1 /* Main.storyboard */; };
 		B3C3FCC31CBF5C26006AA5F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C3FCC21CBF5C26006AA5F1 /* Assets.xcassets */; };
 		B3C3FCC61CBF5C26006AA5F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C3FCC41CBF5C26006AA5F1 /* LaunchScreen.storyboard */; };
@@ -30,10 +32,12 @@
 
 /* Begin PBXFileReference section */
 		B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		B3A82D9220118D14002EC0E6 /* QueuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuesViewController.swift; sourceTree = "<group>"; };
+		B3A82D9420118D24002EC0E6 /* SyncAsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAsyncViewController.swift; sourceTree = "<group>"; };
+		B3A82D9820118D5F002EC0E6 /* BarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrierViewController.swift; sourceTree = "<group>"; };
+		B3A82D9A20118D73002EC0E6 /* GroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewController.swift; sourceTree = "<group>"; };
 		B3C3FCB61CBF5C25006AA5F1 /* GCDExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCDExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3C3FCB91CBF5C25006AA5F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B3C3FCBD1CBF5C25006AA5F1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B3C3FCC01CBF5C25006AA5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B3C3FCC21CBF5C26006AA5F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3C3FCC51CBF5C26006AA5F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,6 +77,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B3A82D9620118D38002EC0E6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B3A82D9220118D14002EC0E6 /* QueuesViewController.swift */,
+				B3A82D9420118D24002EC0E6 /* SyncAsyncViewController.swift */,
+				B3A82D9820118D5F002EC0E6 /* BarrierViewController.swift */,
+				B3A82D9A20118D73002EC0E6 /* GroupsViewController.swift */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		B3A82D9720118D46002EC0E6 /* Master */ = {
+			isa = PBXGroup;
+			children = (
+				B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */,
+			);
+			name = Master;
+			sourceTree = "<group>";
+		};
 		B3C3FCAD1CBF5C25006AA5F1 = {
 			isa = PBXGroup;
 			children = (
@@ -95,9 +118,8 @@
 			isa = PBXGroup;
 			children = (
 				B3C3FCBF1CBF5C25006AA5F1 /* Main.storyboard */,
-				B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */,
-				B3C3FCBB1CBF5C25006AA5F1 /* FirstViewController.swift */,
-				B3C3FCBD1CBF5C25006AA5F1 /* SecondViewController.swift */,
+				B3A82D9720118D46002EC0E6 /* Master */,
+				B3A82D9620118D38002EC0E6 /* Detail */,
 				B3C3FCDB1CBF5C4B006AA5F1 /* GCD.swift */,
 				B31519FB1E899E7400944240 /* Supporting Files */,
 			);
@@ -217,11 +239,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3C3FCBE1CBF5C25006AA5F1 /* SecondViewController.swift in Sources */,
+				B3A82D9320118D14002EC0E6 /* QueuesViewController.swift in Sources */,
 				B3C3FCBA1CBF5C25006AA5F1 /* AppDelegate.swift in Sources */,
 				B312340F2007091200DB2256 /* MasterViewControllerTableViewController.swift in Sources */,
+				B3A82D9920118D5F002EC0E6 /* BarrierViewController.swift in Sources */,
 				B3C3FCDC1CBF5C4B006AA5F1 /* GCD.swift in Sources */,
-				B3C3FCBC1CBF5C25006AA5F1 /* FirstViewController.swift in Sources */,
+				B3A82D9520118D24002EC0E6 /* SyncAsyncViewController.swift in Sources */,
+				B3A82D9B20118D73002EC0E6 /* GroupsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

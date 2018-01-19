@@ -1,15 +1,3 @@
-//
-//  GCD.swift
-//  GCDExample1
-//
-//  Created by Rolando Asmat on 4/13/16.
-//  Copyright © 2016 YAMS. All rights reserved.
-//
-// References: 
-// - https://developer.apple.com/reference/dispatch
-// - https://www.raywenderlich.com/148513/grand-central-dispatch-tutorial-swift-3-part-1
-//
-
 import Foundation
 
 public struct GCD {
