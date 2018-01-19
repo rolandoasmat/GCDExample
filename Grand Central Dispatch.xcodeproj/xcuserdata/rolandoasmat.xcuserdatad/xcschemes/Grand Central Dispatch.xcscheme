@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
-               BuildableName = "GCDExample.app"
-               BlueprintName = "GCDExample"
-               ReferencedContainer = "container:GCDExample.xcodeproj">
+               BuildableName = "Grand Central Dispatch.app"
+               BlueprintName = "Grand Central Dispatch"
+               ReferencedContainer = "container:Grand Central Dispatch.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B3C3FCCB1CBF5C26006AA5F1"
-               BuildableName = "GCDExampleTests.xctest"
-               BlueprintName = "GCDExampleTests"
-               ReferencedContainer = "container:GCDExample.xcodeproj">
+               BuildableName = "Grand Central DispatchTests.xctest"
+               BlueprintName = "Grand Central DispatchTests"
+               ReferencedContainer = "container:Grand Central Dispatch.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
-            BuildableName = "GCDExample.app"
-            BlueprintName = "GCDExample"
-            ReferencedContainer = "container:GCDExample.xcodeproj">
+            BuildableName = "Grand Central Dispatch.app"
+            BlueprintName = "Grand Central Dispatch"
+            ReferencedContainer = "container:Grand Central Dispatch.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -68,9 +68,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
-            BuildableName = "GCDExample.app"
-            BlueprintName = "GCDExample"
-            ReferencedContainer = "container:GCDExample.xcodeproj">
+            BuildableName = "Grand Central Dispatch.app"
+            BlueprintName = "Grand Central Dispatch"
+            ReferencedContainer = "container:Grand Central Dispatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -87,9 +87,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B3C3FCB51CBF5C25006AA5F1"
-            BuildableName = "GCDExample.app"
-            BlueprintName = "GCDExample"
-            ReferencedContainer = "container:GCDExample.xcodeproj">
+            BuildableName = "Grand Central Dispatch.app"
+            BlueprintName = "Grand Central Dispatch"
+            ReferencedContainer = "container:Grand Central Dispatch.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
