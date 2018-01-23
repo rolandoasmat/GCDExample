@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B312340F2007091200DB2256 /* MasterViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */; };
+		B318E4B32016D05100EE2008 /* QueuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318E4B22016D05100EE2008 /* QueuesView.swift */; };
+		B318E4B52016E79600EE2008 /* UIVIewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318E4B42016E79600EE2008 /* UIVIewExtension.swift */; };
 		B3A82D9320118D14002EC0E6 /* QueuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A82D9220118D14002EC0E6 /* QueuesViewController.swift */; };
 		B3A82D9520118D24002EC0E6 /* SyncAsyncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A82D9420118D24002EC0E6 /* SyncAsyncViewController.swift */; };
 		B3A82D9920118D5F002EC0E6 /* BarrierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A82D9820118D5F002EC0E6 /* BarrierViewController.swift */; };
@@ -21,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		B312340E2007091200DB2256 /* MasterViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewControllerTableViewController.swift; sourceTree = "<group>"; };
+		B318E4B22016D05100EE2008 /* QueuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuesView.swift; sourceTree = "<group>"; };
+		B318E4B42016E79600EE2008 /* UIVIewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVIewExtension.swift; sourceTree = "<group>"; };
 		B3A82D9220118D14002EC0E6 /* QueuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueuesViewController.swift; sourceTree = "<group>"; };
 		B3A82D9420118D24002EC0E6 /* SyncAsyncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncAsyncViewController.swift; sourceTree = "<group>"; };
 		B3A82D9820118D5F002EC0E6 /* BarrierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarrierViewController.swift; sourceTree = "<group>"; };
@@ -56,10 +60,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B3A82D9620118D38002EC0E6 /* Detail */ = {
+		B318E4B12016D03800EE2008 /* Queues */ = {
 			isa = PBXGroup;
 			children = (
 				B3A82D9220118D14002EC0E6 /* QueuesViewController.swift */,
+				B318E4B22016D05100EE2008 /* QueuesView.swift */,
+			);
+			name = Queues;
+			sourceTree = "<group>";
+		};
+		B3A82D9620118D38002EC0E6 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B318E4B12016D03800EE2008 /* Queues */,
 				B3A82D9420118D24002EC0E6 /* SyncAsyncViewController.swift */,
 				B3A82D9820118D5F002EC0E6 /* BarrierViewController.swift */,
 				B3A82D9A20118D73002EC0E6 /* GroupsViewController.swift */,
@@ -98,6 +111,7 @@
 				B3A82D9720118D46002EC0E6 /* Master */,
 				B3A82D9620118D38002EC0E6 /* Detail */,
 				B3C3FCDB1CBF5C4B006AA5F1 /* GCD.swift */,
+				B318E4B42016E79600EE2008 /* UIVIewExtension.swift */,
 				B31519FB1E899E7400944240 /* Supporting Files */,
 			);
 			path = "Grand Central Dispatch";
@@ -182,6 +196,8 @@
 				B3A82D9920118D5F002EC0E6 /* BarrierViewController.swift in Sources */,
 				B3C3FCDC1CBF5C4B006AA5F1 /* GCD.swift in Sources */,
 				B3A82D9520118D24002EC0E6 /* SyncAsyncViewController.swift in Sources */,
+				B318E4B52016E79600EE2008 /* UIVIewExtension.swift in Sources */,
+				B318E4B32016D05100EE2008 /* QueuesView.swift in Sources */,
 				B3A82D9B20118D73002EC0E6 /* GroupsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
